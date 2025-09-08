@@ -4,10 +4,10 @@ using BepInEx.Configuration;
 using UnityEngine;
 using System;
 
-namespace CocoonRetrivalAnywhere;
+namespace CocoonRetrievalAnywhere;
 
-[BepInPlugin("fr.mouise.silksong.cocoonretrivalanywhere", "CocoonRetrivalAnywhere", "1.0.0")]
-public class CocoonRetrivalAnywherePlugin : BaseUnityPlugin
+[BepInPlugin("fr.mouise.silksong.cocoonretrievalanywhere", "CocoonRetrievalAnywhere", "1.0.0")]
+public class CocoonRetrievalAnywherePlugin : BaseUnityPlugin
 {
     internal static new ManualLogSource Logger;
     private ConfigEntry<KeyboardShortcut> retrieveCocoonKeyEntry;
@@ -17,7 +17,7 @@ public class CocoonRetrivalAnywherePlugin : BaseUnityPlugin
         Logger = base.Logger;
         Logger.LogInfo($"{this.Info.Metadata.Name} v:{this.Info.Metadata.Version} loaded ");
 
-        retrieveCocoonKeyEntry = Config.Bind("CocoonRetrivalAnywhere",
+        retrieveCocoonKeyEntry = Config.Bind("CocoonRetrivealAnywhere",
                                          "RetrieveCocoonKey",
                                          new KeyboardShortcut(KeyCode.F6),
                                          "The key used to retrieve your cocoon");

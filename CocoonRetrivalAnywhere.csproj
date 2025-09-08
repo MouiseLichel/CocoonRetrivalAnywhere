@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-    <AssemblyName>CocoonRetrivalAnywhere</AssemblyName>
-    <Product>CocoonRetrivalAnywhere</Product>
+    <AssemblyName>CocoonRetrievalAnywhere</AssemblyName>
+    <Product>CocoonRetrievalAnywhere</Product>
     <Version>1.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
@@ -12,7 +12,7 @@
       https://nuget.bepinex.dev/v3/index.json;
       https://nuget.samboy.dev/v3/index.json
     </RestoreAdditionalProjectSources>
-    <RootNamespace>CocoonRetrivalAnywhere</RootNamespace>
+    <RootNamespace>CocoonRetrievalAnywhere</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
