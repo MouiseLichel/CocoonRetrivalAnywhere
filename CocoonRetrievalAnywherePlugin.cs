@@ -27,6 +27,7 @@ public class CocoonRetrievalAnywherePlugin : BaseUnityPlugin
     {
         if (retrieveCocoonKeyEntry.Value.IsDown())
         {
+            Logger.LogInfo($"Cocoon retrieve key pressed");
             RetrieveCocoon();
         }
     }
@@ -36,11 +37,14 @@ public class CocoonRetrievalAnywherePlugin : BaseUnityPlugin
         HeroController instance = HeroController.instance;
         if (!instance)
         {
+            Logger.LogInfo($"Hero controller is null, skipping cocoon retrieval");
             return;
         }
 
         PlayerData instance2 = PlayerData.instance;
-
+        Logger.LogInfo($"Hero controler: {instance}");
+        Logger.LogInfo($"Player data: {instance2}");
+        Logger.LogInfo($"Hero corpse scene: {instance2.HeroCorpseScene}");
         if (!string.IsNullOrEmpty(instance2.HeroCorpseScene))
         {
             instance.CocoonBroken(true, true);
