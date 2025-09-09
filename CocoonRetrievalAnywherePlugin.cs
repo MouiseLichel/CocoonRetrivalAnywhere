@@ -10,7 +10,7 @@ namespace CocoonRetrievalAnywhere;
 public class CocoonRetrievalAnywherePlugin : BaseUnityPlugin
 {
     internal static new ManualLogSource Logger;
-    private ConfigEntry<KeyboardShortcut> retrieveCocoonKeyEntry;
+    private ConfigEntry<KeyCode> retrieveCocoonKeyEntry;
 
     private void Awake()
     {
@@ -19,13 +19,13 @@ public class CocoonRetrievalAnywherePlugin : BaseUnityPlugin
 
         retrieveCocoonKeyEntry = Config.Bind("CocoonRetrivealAnywhere",
                                          "RetrieveCocoonKey",
-                                         new KeyboardShortcut(KeyCode.F6),
+                                         KeyCode.F6,
                                          "The key used to retrieve your cocoon");
     }
 
     private void Update()
     {
-        if (retrieveCocoonKeyEntry.Value.IsDown())
+        if (Input.GetKeyDown(retrieveCocoonKeyEntry.Value))
         {
             Logger.LogInfo($"Cocoon retrieve key pressed");
             RetrieveCocoon();
