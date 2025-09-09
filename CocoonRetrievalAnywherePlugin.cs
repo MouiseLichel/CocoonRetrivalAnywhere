@@ -6,7 +6,7 @@ using System;
 
 namespace CocoonRetrievalAnywhere;
 
-[BepInPlugin("fr.mouise.silksong.cocoonretrievalanywhere", "CocoonRetrievalAnywhere", "1.0.1")]
+[BepInPlugin("fr.mouise.silksong.cocoonretrievalanywhere", "CocoonRetrievalAnywhere", "1.0.2")]
 public class CocoonRetrievalAnywherePlugin : BaseUnityPlugin
 {
     internal static new ManualLogSource Logger;
